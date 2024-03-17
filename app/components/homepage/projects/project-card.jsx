@@ -1,5 +1,6 @@
 // @flow strict
 
+import Image from 'next/image'
 import * as React from 'react';
 
 function ProjectCard({ project }) {
@@ -16,10 +17,24 @@ function ProjectCard({ project }) {
           <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-orange-400"></div>
           <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-green-200"></div>
         </div>
-        <p className="text-center ml-3 text-[#16f2b3] text-base lg:text-xl">
-          {project.name}
-        </p>
+      
+        
+                   
       </div>
+       <div className="flex flex-col items-center justify-center gap-3 p-6">
+                  <div className="flex items-center">
+  <Image
+    src={project.image}
+    alt={"projectimage"}
+    width={40}
+    height={40}
+    className="h-8 w-8 sm:h-10 sm:w-10 rounded-lg"
+  />
+  <p className="text-[#16f2b3] text-base lg:text-xl ml-3">
+    {project.name}
+  </p>
+</div>
+                </div>
       <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
         <code className="font-mono text-xs md:text-sm lg:text-base">
           <div className="blink">
