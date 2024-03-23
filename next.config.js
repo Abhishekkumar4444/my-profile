@@ -6,5 +6,9 @@ module.exports = {
   },
   images: {
     domains: ['res.cloudinary.com', 'media.dev.to']
+  },
+  nextConfig:{
+    output:"export"
   }
+
 }
