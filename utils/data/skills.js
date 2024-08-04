@@ -7,11 +7,11 @@ export const skillsData = [
   'Git',
   'HTML',
   'Javascript',
+  'Jest',
   'MaterialUI',
   'MongoDB',
   'MySQL',
   'Next JS',
-  'PostgreSQL',
   'React',
   'ReactNative',
   'Typescript',
@@ -24,10 +24,10 @@ export const skillsData = [
 
 // AVAILABLE SKILLS
 
-/* 
+/*
   HTML
   CSS
-  JS 
+  JS
   React
   Next JS
   Nuxt JS

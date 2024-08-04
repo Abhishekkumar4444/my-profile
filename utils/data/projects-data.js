@@ -1,6 +1,7 @@
 import poonawalla from '/public/image/logo.png';
 import tiffin from '/public/image/tiffin.jpg';
 import bhaiBandhu from '/public/image/BhaiBandhu.png';
+import pockersocial from '/public/image/pockersocial.png';
 
 export const projectsData = [
     {
@@ -33,8 +34,18 @@ export const projectsData = [
         demo: '',
         image: poonawalla,
     },
-    
-    
+    {
+        id: 3,
+        name: 'Pocker Social',
+        description: "Pocker Social is an innovative mobile application project,it was a social sharing medium for all the poker lovers to socialize app developed by  AceHigh Private Limited. Pocker Social is an up and coming online poker platform with the vision to become the home of online poker in India.",
+        tools: ['React', 'React Native', 'Redux', 'Javascript', 'Typescript', 'Native Base', 'Jira', 'GitHub', 'Git'],
+        role: 'Junior MERN Stack Developer',
+        code: '',
+        demo: '',
+        image: pockersocial,
+    },
+
+
 ];
 
 
