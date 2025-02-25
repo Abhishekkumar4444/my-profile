@@ -8,7 +8,7 @@ module.exports = {
     domains: ['res.cloudinary.com', 'media.dev.to']
   },
   nextConfig:{
-    output:"export"
+    output:"export",
     eslint: {
       ignoreDuringBuilds: true,
     },
