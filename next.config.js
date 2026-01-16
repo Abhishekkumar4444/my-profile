@@ -1,8 +1,8 @@
-const path = require('path')
- 
+const path = require("path");
+
 module.exports = {
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
+    includePaths: [path.join(__dirname, "styles")],
   },
   output: "export",
   eslint: {
@@ -12,13 +12,10 @@ module.exports = {
     ignoreBuildErrors: true,
   },
   images: {
-    domains: ['res.cloudinary.com', 'media.dev.to', 'media2.dev.to'],
+    domains: ["res.cloudinary.com", "media.dev.to", "media2.dev.to"],
     unoptimized: true,
   },
   experimental: {
     webpackBuildWorker: true,
-    parallelServerBuildTraces: true,
-    parallelServerCompiles: true,
   },
-
-}
+};
