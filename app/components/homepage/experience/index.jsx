@@ -2,10 +2,10 @@
 
 import { experiences } from "@/utils/data/experience";
 import Image from "next/image";
-import { BsPersonWorkspace } from "react-icons/bs";
+import { BsCalendar3, BsPersonWorkspace } from "react-icons/bs";
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
-import experience from '/public/lottie/code.json';
+import experience from '/public/lottie/development.json';
 
 function Experience() {
   return (
@@ -30,9 +30,12 @@ function Experience() {
 
       <div className="py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          <div className="flex justify-center items-start">
-            <div className="w-full h-full">
-              <AnimationLottie animationPath={experience} />
+          <div className="flex justify-center items-stretch">
+            <div className="w-full min-h-[360px] lg:min-h-[520px] flex items-center">
+              <AnimationLottie
+                animationPath={experience}
+                style={{ width: "100%", height: "100%" }}
+              />
             </div>
           </div>
 
@@ -50,7 +53,11 @@ function Experience() {
                         className="absolute bottom-0 opacity-80"
                       />
                       <div className="flex justify-center">
-                        <p className="text-xs sm:text-sm text-[#16f2b3]">
+                        <p className="flex items-center gap-2 text-xs sm:text-sm text-[#16f2b3]">
+                          <BsCalendar3
+                            size={14}
+                            className="shrink-0 text-pink-500"
+                          />
                           {experience.duration}
                         </p>
                       </div>
