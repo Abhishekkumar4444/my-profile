@@ -1,8 +1,8 @@
-import bhaiBandhu from "/public/image/BhaiBandhu.png";
-import poonawalla from "/public/image/logo.png";
-import pockersocial from "/public/image/pockersocial.png";
-import quivio from "/public/image/quivio.png";
-import tiffin from "/public/image/tiffin.jpg";
+import bhaiBandhu from "../../public/image/BhaiBandhu.png";
+import poonawalla from "../../public/image/logo.png";
+import pockersocial from "../../public/image/pockersocial.png";
+import quivio from "../../public/image/quivio.png";
+import tiffin from "../../public/image/tiffin.jpg";
 
 export const projectsData = [
   {
