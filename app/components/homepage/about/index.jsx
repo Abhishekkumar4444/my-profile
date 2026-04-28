@@ -2,7 +2,8 @@
 
 import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
-
+import AnimationLottie from "../../helper/animation-lottie";
+import profileLottie from "/public/lottie/coding.json";
 
 function AboutSection() {
   return (
@@ -22,18 +23,27 @@ function AboutSection() {
             {personalData.description}
           </p>
         </div>
-        <div className="flex justify-center order-1 lg:order-2">
-          <Image
-            src={personalData.profile}
-            width={280}
-            height={280}
-            alt="Abvhishek kumar"
-            className="rounded-lg transition-all duration-1000 grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
-          />
+        <div className="flex justify-center items-center order-1 lg:order-2">
+          <div className="profile-glow">
+            <div className="absolute inset-0 rounded-full overflow-hidden opacity-60 pointer-events-none">
+              <AnimationLottie
+                animationPath={profileLottie}
+                style={{ width: "100%", height: "100%" }}
+                className="h-full w-full"
+              />
+            </div>
+            <Image
+              src={personalData.profile}
+              width={240}
+              height={240}
+              alt="Abvhishek kumar"
+              className="relative z-10 aspect-square h-60 w-60 rounded-full object-cover object-top transition-transform duration-300 hover:scale-105 cursor-pointer"
+            />
+          </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default AboutSection;

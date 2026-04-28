@@ -14,7 +14,7 @@ export const educations = [
   {
     id: 3,
     title: "Secondary School Certificate",
-    duration: "1999 - 2009",
+    duration: "2007 - 2009",
     institution: "B.D Public School",
   }
 ]
