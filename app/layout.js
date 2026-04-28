@@ -1,15 +1,19 @@
-import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from './components/footer';
 import Navbar from './components/navbar';
 import './css/card.scss';
 import './css/globals.scss';
-const inter = Inter({ subsets: ['latin'] });
+
+const inter = localFont({
+  src: '../public/fonts/Inter_18pt-Regular.ttf',
+  display: 'swap',
+});
 
 export const metadata = {
-  title: 'Portfolio of Avishek kumar',
-  description: 'This is the portfolio of Avishek kumar. I am a full stack developer and a self taught developer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges.',
+  title: 'Portfolio of Abhishek Kumar',
+  description: 'This is the portfolio of Abhishek Kumar. I am a full stack developer and a self taught developer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges.',
 }
 
 export default function RootLayout({ children }) {
