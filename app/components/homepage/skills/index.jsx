@@ -42,13 +42,11 @@ function Skills() {
                   </div>
                 </div>
                 <div className="flex flex-col items-center justify-center gap-3 p-6">
-                  <div className="h-8 sm:h-10">
+                  <div className="flex items-center justify-center">
                     <Image
-                      src={skillsImage(skill)?.src}
+                      src={skillsImage(skill)}
                       alt={skill}
-                      width={40}
-                      height={40}
-                      className="h-full w-auto rounded-lg"
+                      className="h-10 w-auto rounded-lg"
                     />
                   </div>
                   <p className="text-white text-sm sm:text-lg">

@@ -19,7 +19,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={firaCode.className}>
+      <body className={firaCode.className} suppressHydrationWarning>
         <div className="bg-animation-container">
           <div className="orb orb-1"></div>
           <div className="orb orb-2"></div>
