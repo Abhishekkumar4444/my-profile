@@ -3,7 +3,10 @@ const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
   images: {
-    domains: ['res.cloudinary.com', 'media.dev.to'],
+    remotePatterns: [
+      { protocol: 'https', hostname: 'res.cloudinary.com' },
+      { protocol: 'https', hostname: 'media.dev.to' }
+    ],
     unoptimized: true,
   },
   output: "export",

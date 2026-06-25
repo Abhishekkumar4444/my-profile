@@ -5,7 +5,7 @@ import Image from "next/image";
 import { BsCalendar3, BsPersonWorkspace } from "react-icons/bs";
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
-import experience from '/public/lottie/development.json';
+import experience from '@/public/lottie/development.json';
 
 function Experience() {
   return (

@@ -3,7 +3,7 @@
 import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
 import AnimationLottie from "../../helper/animation-lottie";
-import profileLottie from "/public/lottie/coding.json";
+import profileLottie from "@/public/lottie/coding.json";
 
 function AboutSection() {
   return (

@@ -1,7 +1,7 @@
 import { projectsData } from '@/utils/data/projects-data';
 import ProjectCard from './project-card';
 import AnimationLottie from "../../helper/animation-lottie";
-import projectsLottie from "/public/lottie/build.json";
+import projectsLottie from "@/public/lottie/build.json";
 
 const Projects = () => {
 
