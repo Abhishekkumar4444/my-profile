@@ -8,12 +8,12 @@ export const personalData = {
   phone: "+917325089830",
   address: "Dwarka More,New Delhi",
   github: "https://github.com/Abhishekkumar4444",
-  facebook: "",
+  naukri: "https://www.naukri.com/mnjuser/profile",
   linkedIn: "https://www.linkedin.com/in/abhishekkumar4444/",
   twitter: "https://twitter.com/Abhishekkum4444",
   stackOverflow: "https://stackoverflow.com/users/13973754/avishek-kumar",
   leetcode: "https://leetcode.com/u/Abhishekkumar4444/",
   devUsername: "avishekojha",
   resume:
-    "https://docs.google.com/document/d/1JwOR783iMW1RyNSlAySAVXJ4BKX4eBE7/edit?usp=drive_link&ouid=107263987508183614619&rtpof=true&sd=true",
+    "https://drive.google.com/file/d/16TFZ6FIEGOMMkXNP7ryg4VDcgikTD0II/view?usp=drive_link",
 };

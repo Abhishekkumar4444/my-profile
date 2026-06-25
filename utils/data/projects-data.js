@@ -3,8 +3,31 @@ import poonawalla from "../../public/image/logo.png";
 import pockersocial from "../../public/image/pockersocial.png";
 import quivio from "../../public/image/quivio.png";
 import tiffin from "../../public/image/tiffin.jpg";
+import crefin from "../../public/image/crefin.jpg";
+import rasoaiImg from "../../public/image/adaptive-icon.png";
 
 export const projectsData = [
+  {
+    id: 0,
+    name: "RasoAI App",
+    description:
+      "Rasoai is an intelligent recipe generation and meal planning app. It leverages a Multi-Router Fallback Architecture with models like Gemini 2.5 Flash, Groq Llama 3.3, and DeepSeek to dynamically generate recipes based on user context. Features include a semantic memory AI Brain using Pinecone Vector DB for instant similar recipe retrieval, Voice Transcription via Groq Whisper, and strict JSON output validation.",
+    tools: [
+      "React Native",
+      "Expo",
+      "Zustand",
+      "Gemini API",
+      "Groq API",
+      "DeepSeek API",
+      "Pinecone",
+      "Firebase",
+      "Zod"
+    ],
+    role: "Senior Software Engineer",
+    code: "",
+    demo: "",
+    image: rasoaiImg,
+  },
   {
     id: 1,
     name: "Quivio Pos",

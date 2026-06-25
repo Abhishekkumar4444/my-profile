@@ -1,4 +1,4 @@
-import localFont from 'next/font/local';
+import { Fira_Code } from 'next/font/google';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from './components/footer';
@@ -6,8 +6,8 @@ import Navbar from './components/navbar';
 import './css/card.scss';
 import './css/globals.scss';
 
-const inter = localFont({
-  src: '../public/fonts/Inter_18pt-Regular.ttf',
+const firaCode = Fira_Code({
+  subsets: ['latin'],
   display: 'swap',
 });
 
@@ -19,10 +19,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={firaCode.className}>
+        <div className="bg-animation-container">
+          <div className="orb orb-1"></div>
+          <div className="orb orb-2"></div>
+          <div className="orb orb-3"></div>
+        </div>
       <ToastContainer />
+        <Navbar />
         <main className="min-h-screen relative mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] text-white">
-          <Navbar />
           {children}
         </main>
         <Footer />

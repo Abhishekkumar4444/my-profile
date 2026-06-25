@@ -3,13 +3,13 @@ export const experiences = [
     id: 1,
     title: "Senior Software Engineer",
     company: "Appinventiv, Noida Sector 59,India",
-    duration: "(Oct 2024 - Present)",
+    duration: "(Oct 2024 - April 2026)",
   },
   {
     id: 2,
     title: "Software Engineer",
     company: "A & A Tech(Bhai Bandhu), New Delhi, India (Remote)",
-    duration: "(Jul 2023 - Sep 2024)",
+    duration: "(Jul 2023 - Aug 2024)",
   },
   {
     id: 3,

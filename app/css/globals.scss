@@ -4,6 +4,16 @@
 
 :root {
   --foreground-rgb: rgb(211, 216, 232);
+
+  /* Design Tokens */
+  --glass-bg: rgba(13, 18, 36, 0.6);
+  --glass-border: rgba(99, 102, 241, 0.15);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --accent-pink: #ec4899;
+  --accent-violet: #8b5cf6;
+  --accent-teal: #16f2b3;
+  --card-bg: rgba(17, 17, 35, 0.8);
+  --card-border: rgba(42, 46, 90, 0.6);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -12,11 +22,120 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background-color: #0d1224;
+  overflow-x: hidden;
 }
 
+/* --- Section Divider --- */
+.section-divider {
+  position: relative;
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--accent-pink) 20%,
+    var(--accent-violet) 50%,
+    var(--accent-teal) 80%,
+    transparent 100%
+  );
+  opacity: 0.4;
+  background-size: 200% 100%;
+  animation: shimmerDivider 6s ease-in-out infinite;
+}
+
+@keyframes shimmerDivider {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* --- Section Title Badge --- */
+.section-title {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.125rem;
+  border-radius: 0.5rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* --- Glassmorphic Card --- */
+.glass-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--glass-shadow);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(139, 92, 246, 0.35);
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.15), 0 0 0 1px rgba(139, 92, 246, 0.1);
+}
+
+/* --- Modern Button Glow --- */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-glow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.btn-glow:hover::before {
+  left: 100%;
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.4), 0 0 40px rgba(139, 92, 246, 0.2);
+  transform: translateY(-1px);
+}
+
+/* --- Nav Link Hover Pill --- */
+.nav-link {
+  position: relative;
+  padding: 0.375rem 1rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--accent-teal);
+}
+
+/* --- Profile Glow --- */
 .profile-glow {
   position: relative;
   display: inline-flex;
@@ -68,6 +187,7 @@ body {
   }
 }
 
+/* --- Sticky Cards --- */
 #sticky-card-1 {
   --index: 1;
 }
@@ -85,6 +205,135 @@ body {
 }
 
 .sticky-card {
-  // padding-top: calc(var(--index) * 2.5rem);
   top: calc(var(--index) * 4rem);
+}
+
+/* --- Modern Sleek Background Animation --- */
+.bg-animation-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  overflow: hidden;
+  pointer-events: none;
+  background-color: #0d1224;
+  background-image: 
+    linear-gradient(rgba(22, 242, 179, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 242, 179, 0.025) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridScroll 20s linear infinite;
+}
+
+@keyframes gridScroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -40px -40px;
+  }
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.35;
+  animation: floatOrb 20s infinite ease-in-out alternate;
+}
+
+.orb-1 {
+  width: 40vw;
+  height: 40vw;
+  min-width: 300px;
+  min-height: 300px;
+  background: rgba(236, 72, 153, 0.35);
+  top: -10%;
+  left: -10%;
+  animation-delay: 0s;
+}
+
+.orb-2 {
+  width: 50vw;
+  height: 50vw;
+  min-width: 400px;
+  min-height: 400px;
+  background: rgba(99, 102, 241, 0.35);
+  bottom: -20%;
+  right: -10%;
+  animation-delay: -5s;
+  animation-duration: 25s;
+}
+
+.orb-3 {
+  width: 35vw;
+  height: 35vw;
+  min-width: 250px;
+  min-height: 250px;
+  background: rgba(22, 242, 179, 0.25);
+  top: 40%;
+  left: 60%;
+  animation-delay: -10s;
+  animation-duration: 30s;
+}
+
+@keyframes floatOrb {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(15vw, 15vh) scale(1.1);
+  }
+  66% {
+    transform: translate(-10vw, 20vh) scale(0.9);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* --- Gradient Text --- */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-pink), var(--accent-violet), var(--accent-teal));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* --- Staggered Fade In --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* --- Code Card Glow Border --- */
+.code-card-glow {
+  position: relative;
+}
+
+.code-card-glow::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, var(--accent-pink), var(--accent-violet), var(--accent-teal));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.code-card-glow:hover::before {
+  opacity: 0.6;
+  filter: blur(4px);
 }
