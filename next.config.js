@@ -1,4 +1,5 @@
-const repoName = "developer-portfolio";
+// GitHub Actions sets this environment variable automatically
+const isGithubActions = process.env.GITHUB_ACTIONS || false;
 
 module.exports = {
   images: {
@@ -10,5 +11,6 @@ module.exports = {
   },
   output: "export",
 
-  basePath: `/${repoName}`,
+  // Set basePath to /my-profile ONLY for GitHub Pages, else empty for Render/Local
+  basePath: isGithubActions ? "/my-profile" : "",
 };
